@@ -7,7 +7,7 @@ import { FETCH_USER_REQUEST,FETCH_USER_SUCCESS,FETCH_USER_FAILURE } from '../use
 //     return {
 //         type : FETCH_USER_REQUEST
 //     }
-// }
+// } 
 
     const fetchUserDataSuccess =( userData)=> {
     return {
@@ -39,7 +39,7 @@ export const fetchUser = (current_id) => {
                 )
             .then((response) => {
               console.log(response,"--------USER PARAMS ----------");
-              const userData =response.params;
+              const userData =response.data;
             //   dispatch(setAdmin);
               console.log(userData,"----USER PARAMS--data----");
               

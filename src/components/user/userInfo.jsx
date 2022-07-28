@@ -10,20 +10,14 @@ useEffect( () => {
     fetchUser(id)
 },[]);
    
-const userArray=userData.admin
+const userArray=userData.userResponse
+console.log(userArray);
 const {id} = useParams();
-// const userId =useParams(id)
-// console.log("userId",userId);
-// fetchUser(userId)
-// const arr = userArray.filter(function(item){
-//   return (item.id) === (userId.id*1)
- 
-// })
-// console.log(arr,"arr");
   return (
     <div>
-       {/* {
-        arr.map((val, key) => { 
+       {
+        userData.userResponse &&
+        userData.userResponse.map((val, key) => { 
               return (               
               <div key={key}>
                 <h4>Booking Deails Patient Id : {val.id}</h4>
@@ -31,25 +25,21 @@ const {id} = useParams();
                 <p>Consulting Doctor:{val.physician} </p>
                 <p>Booked Date : {val.date}</p>
              <p>Consulting Time :{val.time} </p>
-            <p>idProof :<img src={val.idProof} alt="error"/></p>
-              </div>
-                 
+            <p>idProof :<img src="C:\Users\Asus\Documents\Coddle\NodeJS\uploads\booking\file_1658396153685.png" alt="error"/></p>
+              </div>                 
               );  
-            })}       */}
-
-            <h2>Hello</h2>
+            })}                 
     </div>
   )
 }
 
-
 const mapStateToProps = (state) => {
   console.log( state,"==========================state in USER----------------------");
-  console.log(  state.userReducerItem.userData," USER from STATE----------------------");
+  console.log(  state.userReducerItem.userData," USER from STATE now changes  id ----------------------");
   
   return {
    
-    userData : state.userReducerItem
+    userData : state.userReducerItem.userData
 
   }
   
