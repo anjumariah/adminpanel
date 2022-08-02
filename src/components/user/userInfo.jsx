@@ -25,7 +25,8 @@ const {id} = useParams();
                 <p>Consulting Doctor:{val.physician} </p>
                 <p>Booked Date : {val.date}</p>
              <p>Consulting Time :{val.time} </p>
-            <p>idProof :<img src="C:\Users\Asus\Documents\Coddle\NodeJS\uploads\booking\file_1658396153685.png" alt="error"/></p>
+            {/* <p>idProof :<img src="http://localhost:3005/img.png" alt="error"/></p> */}
+            <p>idProof :<img src={`http://localhost:3005/${val.idProof}`} alt="error"/></p>
               </div>                 
               );  
             })}                 

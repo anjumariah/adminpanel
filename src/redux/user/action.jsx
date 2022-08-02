@@ -42,7 +42,7 @@ export const fetchUser = (current_id) => {
               const userData =response.data;
             //   dispatch(setAdmin);
               console.log(userData,"----USER PARAMS--data----");
-              
+               
               dispatch(fetchUserDataSuccess(userData))
               
             }) 
